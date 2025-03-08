@@ -1,0 +1,14 @@
+<mapper namespace="com.example.mapper.PostMapper">
+
+    <!-- 사용자 등록 -->
+    <insert id="insertUser" parameterType="com.blog.webapi.dbEntity.User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO users (username, email, password_hash)
+        VALUES (#{username}, #{email}, #{passwordHash})
+    </insert>
+
+    <!-- 사용자 조회 -->
+    <select id="getUserById" parameterType="long" resultType="com.example.model.User">
+        SELECT * FROM users WHERE id = #{id}
+    </select>
+
+</mapper>

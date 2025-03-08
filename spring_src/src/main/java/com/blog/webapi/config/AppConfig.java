@@ -1,4 +1,4 @@
-﻿package com.blog.webapi.config;
+package com.blog.webapi.config;
 
 import org.springframework.context.annotation.Configuration;
 

@@ -1,4 +1,4 @@
-﻿package com.blog.webapi.repository;
+package com.blog.webapi.repository;
 
 public interface BlogRepository {
 }

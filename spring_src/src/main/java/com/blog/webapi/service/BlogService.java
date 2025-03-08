@@ -1,4 +1,4 @@
-﻿package com.blog.webapi.service;
+package com.blog.webapi.service;
 
 public class BlogService {
 }

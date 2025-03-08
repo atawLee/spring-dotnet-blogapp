@@ -1,0 +1,12 @@
+﻿spring:
+  application:
+    name: Spring-Boot-MyBatis
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/myblog
+    username: postgres
+    password: dldpvmzhdj12!@
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+server:
+  port: 8081
