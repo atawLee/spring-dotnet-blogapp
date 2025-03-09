@@ -1,14 +1,18 @@
-<mapper namespace="com.example.mapper.PostMapper">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-    <!-- 사용자 등록 -->
-    <insert id="insertUser" parameterType="com.blog.webapi.dbEntity.User" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO users (username, email, password_hash)
-        VALUES (#{username}, #{email}, #{passwordHash})
+<mapper namespace="com.blog.webapi.mapper.PostMapper">
+
+    <!-- 게시글 등록 -->
+    <insert id="insertPost" parameterType="com.blog.webapi.dbEntity.Post" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO posts (user_id, title, content)
+        VALUES (#{userId}, #{title}, #{content})
     </insert>
 
-    <!-- 사용자 조회 -->
-    <select id="getUserById" parameterType="long" resultType="com.example.model.User">
-        SELECT * FROM users WHERE id = #{id}
+    <!-- 게시글 조회 -->
+    <select id="getPostById" parameterType="long" resultType="com.blog.webapi.dbEntity.Post">
+        SELECT * FROM posts WHERE id = #{id}
     </select>
 
 </mapper>
