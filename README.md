@@ -43,10 +43,16 @@ public class AppConfig {
 #### C# ASP.NET CORE DI
 ```C#
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddSingleton<IDapperContext, PostgresDapperContext>();
+builder.Services.AddOpenApi();
+builder.Services.AddControllers();
+builder.Services.AddSingleton<IDapperContext>(() =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    return new PostgresDapperContext(connectionString);
+});
 builder.Services.AddTransient<IBlogRepository, DapperBlogRepository>();
 builder.Services.AddTransient<BlogService>();
 
+var app = builder.Build();
 ```
 
