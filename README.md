@@ -44,10 +44,9 @@ public class AppConfig {
 ```C#
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<IBlogRepository, BlogRepository>();
-builder.Services.AddScoped<BlogService>();
+builder.Services.AddSingleton<IDapperContext, PostgresDapperContext>();
+builder.Services.AddTransient<IBlogRepository, DapperBlogRepository>();
+builder.Services.AddTransient<BlogService>();
 
-var app = builder.Build();
-app.Run();
 ```
 
