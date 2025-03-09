@@ -5,7 +5,11 @@ using webapi.Service;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
-builder.Services.AddSingleton<IDapperContext, PostgresDapperContext>();
+builder.Services.AddSingleton<IDapperContext>(() =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    return new PostgresDapperContext(connectionString);
+});
 builder.Services.AddTransient<IBlogRepository, DapperBlogRepository>();
 builder.Services.AddTransient<BlogService>();
 
