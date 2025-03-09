@@ -15,9 +15,9 @@ Both approaches have their own benefits:
 Spring's annotation-based DI allows for implicit dependency registration but can lead to hidden dependencies.
 .NET's centralized DI registration ensures all dependencies are declared upfront, making it easier to manage and reducing the risk of misconfigurations.
 The choice between these approaches depends on how much control and visibility a team wants over dependency management.
+#### Java Spring DI(@Configuration)
 
 ```java
-//configuration style 
 @Configuration
 @MapperScan("com.blog.webapi.mapper")  
 public class AppConfig {
@@ -40,6 +40,7 @@ public class AppConfig {
 }
 ```
 
+#### C# ASP.NET CORE DI
 ```C#
 var builder = WebApplication.CreateBuilder(args);
 
