@@ -4,13 +4,17 @@ A simple web application implemented in both Spring Boot and .NET to compare the
 ### Dependency Injection 
 In Spring, dependency injection (DI) is managed through beans.
 You can define an AppConfig class annotated with @Configuration, where dependencies are explicitly registered in the container.
-However, Spring also provides annotations like @Service and @Repository, allowing dependencies to be automatically detected and injected by simply annotating the relevant classes.
+Alternatively, Spring provides annotations like @Service and @Repository, allowing dependencies to be automatically detected and injected by simply annotating the relevant classes.
 
-In contrast, C# requires explicitly registering necessary classes in the DI container before the web application is built, using methods like AddSingleton, AddTransient, and AddScoped. Once registered, dependencies can be injected into constructors using their interfaces without additional configuration.
+On the other hand, .NET does not require such annotations because its DI system allows dependencies to be conveniently registered in a centralized way using AddSingleton, AddTransient, and AddScoped before the web application is built. Once registered, dependencies can be injected into constructors using their interfaces without additional configuration.
 
-Initially, I was skeptical about the necessity of @Service and @Repository annotations in Spring, as I generally prefer to avoid framework-specific dependencies.
-However, after implementing DI in Spring, I realized that manually configuring dependencies via @Configuration increases the risk of errors and adds unnecessary complexity.
-Compared to .NET’s explicit DI registration approach, Spring’s annotation-based DI helps reduce development overhead, making it a more practical choice—even at the cost of tighter coupling with the framework.
+Since .NET's DI container handles dependency resolution explicitly, there is no need for additional annotations like @Service or @Repository. In contrast, Spring's annotation-based DI simplifies wiring dependencies at the class level but also introduces a level of coupling with the framework.
+
+Both approaches have their own benefits:
+
+Spring's annotation-based DI allows for implicit dependency registration but can lead to hidden dependencies.
+.NET's centralized DI registration ensures all dependencies are declared upfront, making it easier to manage and reducing the risk of misconfigurations.
+The choice between these approaches depends on how much control and visibility a team wants over dependency management.
 
 ```java
 //configuration style 
