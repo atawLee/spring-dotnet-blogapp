@@ -1,2 +1,2 @@
 # spring-dotnet-blogapp
-A simple web application implemented in both Spring Boot and .NET to compare their development experience, performance, and architecture.
+A simple web application implemented in both Spring Boot and .NET to compare their development experience.
