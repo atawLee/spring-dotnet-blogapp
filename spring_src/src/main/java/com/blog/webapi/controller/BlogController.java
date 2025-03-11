@@ -1,6 +1,7 @@
 package com.blog.webapi.controller;
 
 import com.blog.webapi.service.BlogService;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -10,5 +11,10 @@ public class BlogController {
 
     public BlogController(BlogService blogService) {
         this.blogService = blogService;
+    }
+
+    @PostMapping("/addpost")
+    public void addpost(){
+
     }
 }
