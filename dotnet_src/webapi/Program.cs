@@ -5,7 +5,7 @@ using webapi.Service;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
-builder.Services.AddSingleton<IDapperContext>(() =>
+builder.Services.AddSingleton<IDapperContext>((x) =>
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
     return new PostgresDapperContext(connectionString);
