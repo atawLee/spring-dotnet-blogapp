@@ -60,11 +60,11 @@ var app = builder.Build();
 Both Spring Boot and .NET provide built-in support for OpenAPI documentation via libraries that generate and expose API specifications. Swagger UI is commonly used to visualize and interact with APIs in both ecosystems.
 
 #### Spring boot 
-build.gradle dependencies에에 다음과 같이 추가합니다.
+Add the following dependency to build.gradle:
 ```
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
 ```
-그리고 SwaggerConfig를 작성합니다. 
+Then, create the SwaggerConfig class:
 ```
 public class SwaggerConfig {
     @Bean
@@ -80,12 +80,17 @@ public class SwaggerConfig {
     }
 }
 ```
-이제 /swagger-ui/index.html# 경로에서 스웨거를 사용할 수 있습니다.
-문서파일은 /v3/api-docs  경로에서 확인 가능합니다.
+Now, Swagger UI can be accessed at:
+📌 /swagger-ui/index.html#
+
+The API documentation can be found at:
+📌 /v3/api-docs
+
 
 #### C# asp.net core (.net 9)
-.net9 이전버전에서는 프로젝트 생성시 open api와 스웨거ui 사용이 프로젝트 생성시 바로 지정할수 있으나 닷넷9버전에서는 open api를 사용시 스웨거는 별도로 받아야 합니다. 
-csproj 파일이 있는 위치에서 다음 커맨드를 입력하거나 같은 이름의 swagger를 nuget을 통해서 설치합니다.
+In versions prior to .NET 9, OpenAPI and Swagger UI could be enabled during project creation. However, in .NET 9, when using OpenAPI, Swagger must be installed separately.
+
+Run the following command in the project directory (where the .csproj file is located) or install the package via NuGet:
 ```
 dotnet add package Swashbuckle.AspNetCore.SwaggerUI --version 7.3.1
 ```
@@ -95,7 +100,7 @@ dotnet add package Swashbuckle.AspNetCore.SwaggerUI --version 7.3.1
 //program.cs 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
-//(생략)
+// (omitted code)
 app.build();
 app.MapControllers();
 if (app.Environment.IsDevelopment())
@@ -107,9 +112,12 @@ if (app.Environment.IsDevelopment())
     });
 }
 ```
-위와 같이 지정합니다. open api의 api문서 자동생성 경로가 /openapi/v1.json 입니다. 경로는 직접 지정할 수 있습니다. 
-이렇게하면 /swagger/index.html 에서 스웨거 페이지를 확인 할 수 있습니다.
+The OpenAPI documentation is automatically generated at:
+📌 /openapi/v1.json
 
+The endpoint can be customized as needed.
 
+Now, the Swagger UI page can be accessed at:
+📌 /swagger/index.html
 
 
