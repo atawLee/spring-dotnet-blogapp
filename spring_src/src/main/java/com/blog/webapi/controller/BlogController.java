@@ -1,6 +1,10 @@
 package com.blog.webapi.controller;
 
+import com.blog.webapi.apiDto.AddPostRequestDto;
+import com.blog.webapi.apiDto.PostResponseDto;
 import com.blog.webapi.service.BlogService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +18,13 @@ public class BlogController {
     }
 
     @PostMapping("/addpost")
-    public void addpost(){
+    public void addpost(AddPostRequestDto dto){
+        blogService.savePost(dto.getUserId(), dto.getTitle(), dto.getContent());
+    }
 
+    @GetMapping("/getpost")
+    public ResponseEntity<PostResponseDto> get(long id) {
+         var item = blogService.getPostById(id);
+         return ResponseEntity.ok(item);
     }
 }

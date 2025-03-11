@@ -17,8 +17,6 @@ public class SwaggerConfig {
 
     private Info apiInfo() {
         return new Info()
-                .title("MBTIgram Springdoc")
-                .description("Springdoc을 사용한 MBTIgram Swagger UI")
                 .version("1.0.0");
     }
 }

@@ -1,7 +1,8 @@
 package com.blog.webapi.repository;
 
-import java.time.LocalDateTime;
+import com.blog.webapi.dbEntity.Post;
 
 public interface BlogRepository {
-    public void savePost(Long userId, String title, String content);
+    public void savePost(Post post);
+    public Post getPostById(Long id);
 }
