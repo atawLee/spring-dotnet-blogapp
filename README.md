@@ -95,7 +95,7 @@ Run the following command in the project directory (where the .csproj file is lo
 dotnet add package Swashbuckle.AspNetCore.SwaggerUI --version 7.3.1
 ```
 
-그뒤에 program.cs에서 스웨거 사용 설정을 해줍니다. 
+Next, configure Swagger in Program.cs:
 ```
 //program.cs 
 var builder = WebApplication.CreateBuilder(args);
