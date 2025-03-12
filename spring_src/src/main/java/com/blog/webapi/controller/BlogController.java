@@ -1,7 +1,7 @@
 package com.blog.webapi.controller;
 
-import com.blog.webapi.apiDto.AddPostRequestDto;
-import com.blog.webapi.apiDto.PostDetailResponseDto;
+import com.blog.webapi.apidto.AddPostRequestDto;
+import com.blog.webapi.apidto.PostDetailResponseDto;
 import com.blog.webapi.service.BlogService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

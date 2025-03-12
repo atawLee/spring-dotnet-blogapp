@@ -1,4 +1,4 @@
-package com.blog.webapi.dbEntity;
+package com.blog.webapi.dbentity;
 
 public class Tag {
     private Long id;

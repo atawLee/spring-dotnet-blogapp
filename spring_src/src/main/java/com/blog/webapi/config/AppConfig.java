@@ -1,6 +1,5 @@
 package com.blog.webapi.config;
 
-import com.blog.webapi.dbEntity.Post;
 import com.blog.webapi.mapper.PostMapper;
 import com.blog.webapi.repository.BlogRepository;
 import com.blog.webapi.repository.MyBatisBlogRepositoryImpl;

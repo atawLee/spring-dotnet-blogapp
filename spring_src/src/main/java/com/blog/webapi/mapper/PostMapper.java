@@ -1,6 +1,6 @@
 package com.blog.webapi.mapper;
 
-import com.blog.webapi.dbEntity.Post;
+import com.blog.webapi.dbentity.Post;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

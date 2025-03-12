@@ -1,6 +1,4 @@
-package com.blog.webapi.apiDto;
-
-import java.util.List;
+package com.blog.webapi.apidto;
 
 public class PostSummaryDto {
     private Long id;

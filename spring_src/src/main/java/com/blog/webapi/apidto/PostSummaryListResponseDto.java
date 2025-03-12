@@ -1,4 +1,4 @@
-package com.blog.webapi.apiDto;
+package com.blog.webapi.apidto;
 
 import java.util.ArrayList;
 

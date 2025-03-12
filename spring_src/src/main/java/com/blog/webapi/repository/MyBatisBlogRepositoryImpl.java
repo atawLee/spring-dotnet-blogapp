@@ -1,7 +1,6 @@
 package com.blog.webapi.repository;
 
-import com.blog.webapi.apiDto.UpdatePostRequestDto;
-import com.blog.webapi.dbEntity.Post;
+import com.blog.webapi.dbentity.Post;
 import com.blog.webapi.mapper.PostMapper;
 
 import java.util.List;

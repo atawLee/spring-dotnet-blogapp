@@ -1,10 +1,10 @@
 package com.blog.webapi.service;
 
-import com.blog.webapi.apiDto.PostSummaryDto;
-import com.blog.webapi.apiDto.PostDetailResponseDto;
-import com.blog.webapi.apiDto.PostSummaryListResponseDto;
-import com.blog.webapi.apiDto.UpdatePostRequestDto;
-import com.blog.webapi.dbEntity.Post;
+import com.blog.webapi.apidto.PostSummaryDto;
+import com.blog.webapi.apidto.PostDetailResponseDto;
+import com.blog.webapi.apidto.PostSummaryListResponseDto;
+import com.blog.webapi.apidto.UpdatePostRequestDto;
+import com.blog.webapi.dbentity.Post;
 import com.blog.webapi.repository.BlogRepository;
 
 import java.util.ArrayList;

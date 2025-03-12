@@ -1,4 +1,4 @@
-package com.blog.webapi.dbEntity;
+package com.blog.webapi.dbentity;
 
 public class PostTag {
     private Long postId;

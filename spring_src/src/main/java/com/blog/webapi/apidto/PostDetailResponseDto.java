@@ -1,4 +1,4 @@
-package com.blog.webapi.apiDto;
+package com.blog.webapi.apidto;
 
 public class PostDetailResponseDto {
     private Long id;

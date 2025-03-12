@@ -1,17 +1,9 @@
-package com.blog.webapi.apiDto;
+package com.blog.webapi.apidto;
 
-public class UpdatePostRequestDto {
-    private long id;
+public class AddPostRequestDto {
     private String title;
     private String content;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
+    private Long userId;
 
     public String getTitle() {
         return title;
@@ -27,5 +19,13 @@ public class UpdatePostRequestDto {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 }

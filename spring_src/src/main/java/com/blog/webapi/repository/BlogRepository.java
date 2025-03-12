@@ -1,6 +1,6 @@
 package com.blog.webapi.repository;
 
-import com.blog.webapi.dbEntity.Post;
+import com.blog.webapi.dbentity.Post;
 
 
 import java.util.List;
