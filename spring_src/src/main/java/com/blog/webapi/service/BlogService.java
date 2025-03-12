@@ -34,8 +34,8 @@ public class BlogService {
                 item.getContent());
     }
 
-    public PostSummaryListResponseDto getPosts(int page, int rawCount){
-        var postList = blogRepository.getAllPosts(page, rawCount);
+    public PostSummaryListResponseDto getPosts(long userId,int page, int rawCount){
+        var postList = blogRepository.getPosts(userId, page, rawCount);
         ArrayList<PostSummaryDto> dtoList = new ArrayList<>();
         for (Post item : postList) {
             dtoList.add(new PostSummaryDto(
@@ -46,11 +46,16 @@ public class BlogService {
         return new PostSummaryListResponseDto(dtoList);
     }
 
-    public void deletePost(long id, long userId){
-
+    public void deletePost(long userId,long id){
+        blogRepository.deletePost(id, userId);
     }
 
-    public void updatePost(UpdatePostRequestDto updateData){
-
+    public void updatePost(long userId, UpdatePostRequestDto updateData){
+        Post post = new Post();
+        post.setId(updateData.getId());
+        post.setContent(updateData.getContent());
+        post.setTitle(updateData.getTitle());
+        post.setUserId(userId);
+        blogRepository.updatePost(post);
     }
 }

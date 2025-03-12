@@ -15,4 +15,25 @@
         SELECT * FROM posts WHERE id = #{id}
     </select>
 
+    <select id="getPosts" resultType="com.blog.webapi.dbEntity.Post">
+        SELECT *
+        FROM posts
+        WHERE user_id = #{userId}
+        ORDER BY id DESC
+            LIMIT #{page}, #{rawCount}
+    </select>
+
+    <!-- 게시글 삭제 (해당 게시글의 소유자만 삭제 가능하도록 조건 추가) -->
+    <delete id="deletePost">
+        DELETE FROM posts
+        WHERE id = #{id}
+          AND user_id = #{userId}
+    </delete>
+
+    <update id="updatePost" parameterType="com.blog.webapi.dbEntity.Post">
+        UPDATE posts
+        SET title = #{title},
+            content = #{content}
+        WHERE id = #{id}
+    </update>
 </mapper>
