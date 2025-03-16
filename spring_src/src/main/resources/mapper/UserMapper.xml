@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blog.webapi.mapper.UserMapper">
+
+    <!-- INSERT -->
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO users (username, email, password_hash, created_at)
+        VALUES (#{username}, #{email}, #{passwordHash}, #{createdAt})
+    </insert>
+
+    <!-- SELECT BY ID -->
+    <select id="getUserById" parameterType="long" resultType="com.blog.webapi.dbentity.User">
+        SELECT id, username, email, password_hash AS passwordHash, created_at AS createdAt
+        FROM users
+        WHERE id = #{id}
+    </select>
+
+    <!-- SELECT ALL -->
+    <select id="getAllUsers" resultType="com.blog.webapi.dbentity.User">
+        SELECT id, username, email, password_hash AS passwordHash, created_at AS createdAt
+        FROM users
+    </select>
+
+    <!-- UPDATE -->
+    <update id="updateUser">
+        UPDATE users
+        SET username = #{username}, email = #{email}, password_hash = #{passwordHash}
+        WHERE id = #{id}
+    </update>
+
+    <!-- DELETE -->
+    <delete id="deleteUser" parameterType="long">
+        DELETE FROM users WHERE id = #{id}
+    </delete>
+
+</mapper>
