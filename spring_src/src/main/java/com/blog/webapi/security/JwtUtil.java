@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Component
 public class JwtUtil {
-    private static final String SECRET = "your-256-bit-secret-your-256-bit-secret";
+    private static final String SECRET = "7eUZXnHCRiCxL3tVfz3McB4XHivzKXGJDkA5XV9pjOU=";
     private static final SecretKey SECRET_KEY = Keys.hmacShaKeyFor(Decoders.BASE64.decode(SECRET));
     private static final long EXPIRATION_TIME = 86400000; // 24시간
 

@@ -11,13 +11,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserMapper userMapper;
 
-    public UserDetailsServiceImpl(UserMapper userMapper) {
+    public UserDetailsServiceImpl(UserMapper userMapper, CustomUserDetails customUserDetails) {
         this.userMapper = userMapper;
     }
 
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
+        return new CustomUserDetails();
     }
 }
