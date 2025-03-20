@@ -11,7 +11,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserMapper userMapper;
 
-    public UserDetailsServiceImpl(UserMapper userMapper, CustomUserDetails customUserDetails) {
+    public UserDetailsServiceImpl(UserMapper userMapper) {
         this.userMapper = userMapper;
     }
 
