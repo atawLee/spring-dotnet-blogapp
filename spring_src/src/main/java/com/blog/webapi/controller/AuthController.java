@@ -1,7 +1,9 @@
 package com.blog.webapi.controller;
 
+import com.blog.webapi.apidto.LoginRequestDto;
 import com.blog.webapi.security.JwtUtil;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -13,13 +15,13 @@ public class AuthController {
 
     private final JwtUtil jwtUtil;
 
-    public AuthController(JwtUtil jwtUtil) {
+    public AuthController(UserDetailsService service, JwtUtil jwtUtil) {
         this.jwtUtil = jwtUtil;
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam String username) {
-        return jwtUtil.generateToken(username);
+    public String login(@RequestParam LoginRequestDto dto) {
+        return jwtUtil.generateToken(dto.getUsername());
     }
 
     @GetMapping("/protected")

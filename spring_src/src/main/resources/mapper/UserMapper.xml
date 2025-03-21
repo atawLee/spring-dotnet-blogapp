@@ -17,6 +17,13 @@
         WHERE id = #{id}
     </select>
 
+    <!-- SELECT BY UserName -->
+    <select id="getUserByUsername" parameterType="String" resultType="com.blog.webapi.dbentity.User">
+        SELECT id, username, email, password_hash AS passwordHash, created_at AS createdAt
+        FROM users
+        WHERE username = #{username}
+    </select>
+
     <!-- SELECT ALL -->
     <select id="getAllUsers" resultType="com.blog.webapi.dbentity.User">
         SELECT id, username, email, password_hash AS passwordHash, created_at AS createdAt
