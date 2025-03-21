@@ -3,7 +3,6 @@ package com.blog.webapi.repository;
 import com.blog.webapi.dbentity.User;
 import com.blog.webapi.mapper.UserMapper;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -22,8 +21,13 @@ public class MyBatisUserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public Optional<User> findById(Long id) {
-        return Optional.ofNullable(userMapper.getUserById(id));
+    public User findById(Long id) {
+        return userMapper.getUserById(id);
+    }
+
+    @Override
+    public User findByUsername(String username) {
+        return null;
     }
 
     @Override

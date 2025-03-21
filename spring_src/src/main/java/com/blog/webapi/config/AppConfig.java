@@ -14,7 +14,7 @@ import org.springframework.beans.factory.ObjectFactory;
 
 
 @Configuration
-@MapperScan("com.blog.webapi.mapper")  // MyBatis 매퍼 위치 지정
+@MapperScan("com.blog.webapi.mapper")
 public class AppConfig {
 
     public AppConfig() {
