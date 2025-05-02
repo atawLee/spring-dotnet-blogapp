@@ -3,8 +3,19 @@
   "WorkspaceRootPath": "C:\\Project\\spring-dotnet-blogapp\\dotnet_src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\b1246\\AppData\\Local\\Temp\\.vsdbgsrc\\1db018485e559afd2a8a60b7f58ad7494a88a54534a33926251ba32d434b9a9a\\Thread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{913DA60A-3E3E-46E8-9265-47D8A22E3EAB}|webapi\\webapi.csproj|c:\\project\\spring-dotnet-blogapp\\dotnet_src\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{913DA60A-3E3E-46E8-9265-47D8A22E3EAB}|webapi\\webapi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913DA60A-3E3E-46E8-9265-47D8A22E3EAB}|webapi\\webapi.csproj|c:\\project\\spring-dotnet-blogapp\\dotnet_src\\webapi\\service\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913DA60A-3E3E-46E8-9265-47D8A22E3EAB}|webapi\\webapi.csproj|solutionrelative:webapi\\service\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913DA60A-3E3E-46E8-9265-47D8A22E3EAB}|webapi\\webapi.csproj|c:\\project\\spring-dotnet-blogapp\\dotnet_src\\webapi\\controller\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913DA60A-3E3E-46E8-9265-47D8A22E3EAB}|webapi\\webapi.csproj|solutionrelative:webapi\\controller\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,12 +34,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Thread.cs",
+              "DocumentMoniker": "C:\\Users\\b1246\\AppData\\Local\\Temp\\.vsdbgsrc\\1db018485e559afd2a8a60b7f58ad7494a88a54534a33926251ba32d434b9a9a\\Thread.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Users\\b1246\\AppData\\Local\\Temp\\.vsdbgsrc\\1db018485e559afd2a8a60b7f58ad7494a88a54534a33926251ba32d434b9a9a\\Thread.cs",
+              "ToolTip": "C:\\Users\\b1246\\AppData\\Local\\Temp\\.vsdbgsrc\\1db018485e559afd2a8a60b7f58ad7494a88a54534a33926251ba32d434b9a9a\\Thread.cs",
+              "RelativeToolTip": "..\\..\\..\\Users\\b1246\\AppData\\Local\\Temp\\.vsdbgsrc\\1db018485e559afd2a8a60b7f58ad7494a88a54534a33926251ba32d434b9a9a\\Thread.cs",
+              "ViewState": "AgIAAGMBAAAAAAAAAAAswHoBAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T12:35:31.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BlogService.cs",
+              "DocumentMoniker": "C:\\Project\\spring-dotnet-blogapp\\dotnet_src\\webapi\\Service\\BlogService.cs",
+              "RelativeDocumentMoniker": "webapi\\Service\\BlogService.cs",
+              "ToolTip": "C:\\Project\\spring-dotnet-blogapp\\dotnet_src\\webapi\\Service\\BlogService.cs",
+              "RelativeToolTip": "webapi\\Service\\BlogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:12:53.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "C:\\Project\\spring-dotnet-blogapp\\dotnet_src\\webapi\\Controller\\BlogController.cs",
+              "RelativeDocumentMoniker": "webapi\\Controller\\BlogController.cs",
+              "ToolTip": "C:\\Project\\spring-dotnet-blogapp\\dotnet_src\\webapi\\Controller\\BlogController.cs",
+              "RelativeToolTip": "webapi\\Controller\\BlogController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:12:48.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Project\\spring-dotnet-blogapp\\dotnet_src\\webapi\\Program.cs",
               "RelativeDocumentMoniker": "webapi\\Program.cs",
-              "ToolTip": "C:\\Project\\spring-dotnet-blogapp\\dotnet_src\\webapi\\Program.cs",
-              "RelativeToolTip": "webapi\\Program.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAABsAAAAKAAAAAAAAAA==",
+              "ToolTip": "C:\\Project\\spring-dotnet-blogapp\\dotnet_src\\webapi\\Program.cs*",
+              "RelativeToolTip": "webapi\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T06:41:55.777Z",
               "EditorCaption": ""

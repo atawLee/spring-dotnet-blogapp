@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using webapi.Database;
 using webapi.Repository;
 using webapi.Service;
@@ -12,17 +13,19 @@ builder.Services.AddSingleton<IDapperContext>((x) =>
 });
 builder.Services.AddTransient<IBlogRepository, DapperBlogRepository>();
 builder.Services.AddTransient<BlogService>();
-
+builder.Services.AddTransient<AuthService>();
 var app = builder.Build();
-app.MapControllers();
 
-if (app.Environment.IsDevelopment())
+app.MapPost("/post", async (Post post,[FromServices] BlogService service) =>
 {
-    app.MapOpenApi();
-    app.UseSwaggerUI(x =>
-    {
-        x.SwaggerEndpoint("/openapi/v1.json","V1 API");
-    });
-}
+    await service.AddPost(post);
+    return Results.Ok();
+});
+
+app.MapGet("/post", async (BlogService service) =>
+{
+    var result = await service.GetPosts();
+    return Results.Ok(result);
+});
 
 app.Run();

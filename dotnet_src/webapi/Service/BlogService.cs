@@ -1,4 +1,5 @@
-﻿using webapi.Repository;
+﻿using webapi.Controller;
+using webapi.Repository;
 
 namespace webapi.Service;
 
@@ -14,5 +15,11 @@ public class BlogService
     public async Task AddPost(Post post)
     {
         await _repository.InsertPost(post);
+    }
+
+
+    public async Task<PostPostDetailResponseDto> GetPosts()
+    {
+        throw new NotImplementedException();
     }
 }

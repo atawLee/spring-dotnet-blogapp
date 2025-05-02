@@ -15,9 +15,19 @@ public class BlogController :ControllerBase
         _service = service;
     }
 
-    [HttpGet("/post")]
+    [HttpPost("/post")]
     public async Task AddPost(Post post)
     {
         await _service.AddPost(post);
     }
+
+    [HttpPost("/post")]
+    public async Task<PostPostDetailResponseDto> GetPosts()
+    {
+        return await _service.GetPosts();
+    }
+}
+
+public class PostPostDetailResponseDto
+{
 }
