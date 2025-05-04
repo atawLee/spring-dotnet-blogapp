@@ -1,4 +1,4 @@
-namespace webapi.Repository;
+namespace webapi.Database.DbEntity;
 
 public class User
 {

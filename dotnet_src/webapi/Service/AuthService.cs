@@ -3,18 +3,26 @@ using System.Security.Claims;
 
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
-using webapi.Core;
+using webapi.Repository;
 using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
+using User = webapi.Core.User;
 
 namespace webapi.Service;
 
 public class AuthService
 {
     private readonly IConfiguration _configuration;
+    private readonly IAuthRepository _authRepository;
 
-    public AuthService(IConfiguration configuration)
+    public AuthService(IConfiguration configuration, IAuthRepository authRepository)
     {
         _configuration = configuration;
+        _authRepository = authRepository;
+    }
+    
+    public SignUp(User user)
+    {
+        
     }
     
     private string GenerateJWTToken(User user)
